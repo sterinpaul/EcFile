@@ -1,0 +1,1 @@
+export const CLOUDINARY_PROFILE_PIC = 'https://res.cloudinary.com/pulse-socialmedia/image/upload/v1704790469/ecFileProfilePics/image-'

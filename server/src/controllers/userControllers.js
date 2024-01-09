@@ -37,6 +37,7 @@ const userControllers = {
                         subject: `Hello ${response.fullName}`, // Subject line
                         text: "Please verify your E-mail ?", // plain text body
                         html: `<b><a href="http://${req.headers.host}/api/user/auth/${verificationToken}">Click here to verify your email</a></b>`, // html body
+                        // html: `<b><a href="http://localhost:5173/auth/${verificationToken}">Click here to verify your email</a></b>`, // html body
                     });
 
                     console.log("Message sent: %s", info.messageId);

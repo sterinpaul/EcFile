@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 import { toast } from 'react-toastify';
 import { useDispatch } from 'react-redux';
 import { setToken,setUser } from '../../redux/userSlice';
-import { useState } from 'react';
 import { login } from "../../api/apiConnections";
 import {
     CardHeader,
@@ -19,11 +18,6 @@ import {
 const LoginForm = () => {
     const dispatch = useDispatch()
     const navigate = useNavigate()
-    const [userName, setUserName] = useState('')
-    const [userDetails, setUserDetails] = useState({ firstName: '', lastName: '', userName: '', email: '' })
-    const [userNameStatus, setUserNameStatus] = useState(false)
-    const [userNameError, setUserNameError] = useState(false)
-
     const mobileNumberHandle = (e) => {
         let mobileValue = e.target.value.replace(/[^0-9]/g, '').slice(0, 10)
         if (/^[0-5]/.test(mobileValue)) {

@@ -7,6 +7,7 @@ const getTokenFromLocal = ()=>{
         return token
     }
 }
+
 const getUserIdFromLocal = ()=>{
     const userId = localStorage.getItem("userId")
     if(userId){

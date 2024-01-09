@@ -8,7 +8,7 @@ import {
   IconButton,
   Card,
 } from "@material-tailwind/react";
-import { userSignOut } from "../../redux/userSlice";
+import { adminSignOut } from "../../redux/adminSlice";
 import { toast } from "react-toastify";
  
 export function AdminNavBar() {
@@ -23,7 +23,7 @@ export function AdminNavBar() {
   }, []);
  
   const logOut = ()=>{
-    dispatch(userSignOut())
+    dispatch(adminSignOut())
     toast.success('Logout success')
   }
   const navList = (
@@ -34,7 +34,7 @@ export function AdminNavBar() {
  
   return (
     
-      <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4 bg-blue-500 border-none">
+      <Navbar className="fixed top-0 z-10 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4 bg-gray-800 border-none">
         <div className="flex items-center justify-between text-blue-gray-900">
           <Typography
             as="a"
@@ -43,7 +43,7 @@ export function AdminNavBar() {
             color="white"
             style={{textShadow:'1px 1px 2px black'}}
           >
-            EcFile
+            Admin Dashboard
           </Typography>
           <div className="flex items-center gap-4">
             <div className="mr-4 hidden lg:block">{navList}</div>

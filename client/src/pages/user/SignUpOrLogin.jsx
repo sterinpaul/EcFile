@@ -1,7 +1,6 @@
 import { useState } from "react";
 import LoginForm from "../../components/user/LoginForm";
 import SignUpForm from "../../components/user/SignUpForm";
-
 import {
   Card
 } from "@material-tailwind/react";
@@ -21,7 +20,7 @@ import {
             </>
              : 
             <>
-            <SignUpForm/>
+            <SignUpForm setSignIn={setSignIn}/>
             <button className="mt-2">
               Already have an account ?
               <span onClick={()=>setSignIn(!signIn)} className="ml-1 text-blue-500 transition-colors hover:text-blue-700">Login</span>

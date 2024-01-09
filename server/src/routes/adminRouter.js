@@ -4,7 +4,7 @@ import adminControllers from '../controllers/adminControllers.js'
 const adminRouter = ()=>{
     const router = express.Router()
     router.get('/',adminControllers.getDashBoard)
-    router.post('/adminlogin',adminControllers.adminLogin)
+    router.post('/login',adminControllers.adminLogin)
     
     return router
 }

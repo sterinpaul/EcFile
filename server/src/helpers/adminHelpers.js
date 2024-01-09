@@ -1,11 +1,12 @@
 import Admin from "../model/adminModel.js"
+import User from "../model/userModel.js"
 
 const adminHelpers = {
     getDashBoard:async()=>{
-        return await Admin.find()
+        return await User.find().sort({createdAt:-1})
     },
-    adminLogin:async(adminData)=>{
-        const response = await Admin.findOne({email:adminData.email})
+    adminLogin:async(email)=>{
+        const response = await Admin.findOne({email})
         if(response){
             return response
         }

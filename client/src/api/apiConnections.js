@@ -41,3 +41,25 @@ export const getUserDetails = async (userId)=>{
         throw new Error(`Error while getting user data : ${error}`)
     }
 }
+
+export const adminLogin = async (values)=>{
+    try{
+        const response = await baseURL.post(`/admin/login`,values)
+        return response?.data
+        
+    // Handling error
+    }catch(error){
+        throw new Error(`Error while admin login : ${error}`)
+    }
+}
+
+export const getUserData = async()=>{
+    try{
+        const response = await baseURL.get(`/admin`)
+        return response?.data
+        
+    // Handling error
+    }catch(error){
+        throw new Error(`Error while loading all users : ${error}`)
+    }
+}

@@ -25,7 +25,7 @@ export const UserHome = () => {
         getUser()
     }, [])
     return (
-        <div className="flex justify-center w-screen">
+        <div className="flex justify-center w-screen mt-20">
             <Card className="w-96 shadow-2xl">
                 <CardHeader floated={false} className="h-80">
                     <img className="w-full h-full object-cover" src={CLOUDINARY_PROFILE_PIC+user?.profilePic} alt="profile-picture" />
